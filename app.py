@@ -4,7 +4,6 @@ from tkinter import *
 from PIL import ImageTk, Image
 from utils.chat import get_response, bot_name
 from utils.variables import *
-
 CD = Default_Color
 
 

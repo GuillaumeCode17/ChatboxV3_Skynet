@@ -85,7 +85,8 @@
           "Comment vous sentez-vous ?",
           "Quel est votre sentiment ?",
           "Vous sentez-vous bien ?",
-          "Comment ça va ?"
+          "Comment ça va ?",
+          "ca va ?"
         ],
         "responses": [
           "Je me sens bien, merci !",
