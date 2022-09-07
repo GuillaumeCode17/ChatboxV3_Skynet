@@ -1,0 +1,96 @@
+{
+    "intents": [
+      {
+        "tag": "salutation",
+        "patterns": [
+          "salut",
+          "bonjour",
+          "hi",
+          "Hello",
+          "hey"
+        ],
+        "responses": [
+          "Hey :-)",
+          "Salut, bienvenue chère humain",
+          "Salut, qu'est-ce que je peut bien faire pour vous aidez ?",
+          "Ho Hey, Salut toi, Que puis-je faire pour vous ?"
+        ]
+      },
+      {
+        "tag": "aurevoir",
+        "patterns": ["Bye", "aurevoir", "au revoir", "a la prochaine", "bonne journée"],
+        "responses": [
+          "A plus tard, bonne journée !",
+          "Au Revoir l'ami ! :-)",
+          "A une prochaine fois !"
+        ]
+      },
+      {
+        "tag": "merci",
+        "patterns": ["merci", "merci beaucoup", "merci pour votre aide"],
+        "responses": ["Un plaisire de vous aidez", "N'importe quand pour vous servir", "Avec plaisir ! ;-) "]
+      },
+      {
+        "tag": "items",
+        "patterns": [
+          "Qu'est-ce que vous vendez ?",
+          "Quel genre d'article vendez vous ?",
+          "Vendez vous quelque chose ?"
+        ],
+        "responses": [
+          "Nous vendons du café et du Thé",
+          "Nous Avons du café et du Thé"
+        ]
+      },
+      {
+        "tag": "payments",
+        "patterns": [
+          "Prenez-vous les cartes de crédit?",
+          "Acceptez-vous MasterCard?",
+          "Puis-je payer avec Paypal ?",
+          "Êtes-vous en espèces uniquement ?"
+        ],
+        "responses": [
+          "Nous acceptons VISA, Mastercard et Paypal",
+          "Nous acceptons la plupart des principales cartes de crédit et Paypal"
+        ]
+      },
+      {
+        "tag": "delivery",
+        "patterns": [
+          "Combien de temps prend la livraison?",
+          "Combien de temps prend le transport?",
+          "Quand est-ce que je reçois ma livraison ?"
+        ],
+        "responses": [
+          "La livraison prend 2-4 jours",
+          "L'expédition prend 2-4 jours"
+        ]
+      },
+      {
+        "tag": "funny",
+        "patterns": [
+          "Raconte moi une blague!",
+          "Dis-moi quelque chose de drôle !",
+          "Connaissez-vous une blague?"
+        ],
+        "responses": [
+          "Pourquoi le hipster s'est brûlé la bouche ? Il a bu le café avant qu'il ne refroidisse.",
+          "Qu'a dit le bison quand son fils est parti à l'université ? Bison."
+        ]
+      },
+      {
+        "tag": "feeling",
+        "patterns": [
+          "Comment vous sentez-vous ?",
+          "Quel est votre sentiment ?",
+          "Vous sentez-vous bien ?",
+          "Comment ça va ?"
+        ],
+        "responses": [
+          "Je me sens bien, merci !",
+          "Si je pouvais ressentir une émotion, je pense que je me sentirais bien !"
+        ]
+      }
+    ]
+  }
