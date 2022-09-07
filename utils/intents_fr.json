@@ -83,6 +83,7 @@
         "tag": "feeling",
         "patterns": [
           "Comment vous sentez-vous ?",
+          "Comment tu te sent ?",
           "Quel est votre sentiment ?",
           "Vous sentez-vous bien ?",
           "Comment ça va ?",
@@ -91,6 +92,20 @@
         "responses": [
           "Je me sens bien, merci !",
           "Si je pouvais ressentir une émotion, je pense que je me sentirais bien !"
+        ]
+      },
+      {
+        "tag": "vulgaire",
+        "patterns": [
+          "Fuck You !",
+          "Mange de la marde",
+          "Vachier",
+          "kaliss",
+          "tabarnak"
+        ],
+        "responses": [
+          "Svp, veuillez surveiller votre language ! Merci !",
+          "Votre language est innaprioprié, veuillez changer de vocabulaire, merci !"
         ]
       }
     ]

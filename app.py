@@ -168,6 +168,7 @@ class ChatApplication:
                 self.text_widget.configure(state=NORMAL)
                 self.text_widget.insert(END, msgp2, 'SkyNet')
                 self.text_widget.insert(END, clearing)
+                self.text_widget.see(END)
                 sleep(1)
                 self.text_widget.delete('1.0', END)
                 self.text_widget.insert(
