@@ -1,4 +1,5 @@
 import threading
+from utils.NetFlixGet import All_Movies
 from time import sleep
 from tkinter import *
 from PIL import ImageTk, Image
@@ -9,6 +10,7 @@ CD = Default_Color
 
 class ChatApplication:
     Change_Name_Status = False
+    Movie_Status = False
     Username = ""
 
     def __init__(self) -> None:
@@ -155,6 +157,9 @@ class ChatApplication:
             quitting = ": Bien sûr Patron, je ferme cette application sur le champ !"
             clearing = ": Sans problème, je nettoie la fenêtre immédiatement !"
             self.text_widget.tag_config('SkyNet', foreground=CD.GREEN)
+            self.text_widget.tag_config(
+                'Instruction_movies', foreground=CD.ORANGE)
+            self.text_widget.tag_config('_NB', foreground=CD.MAGENTA)
             print(msg)
             if msg.lower() == "quit" or msg.lower() == "exit":
                 self.text_widget.configure(state=NORMAL)
@@ -182,6 +187,8 @@ class ChatApplication:
                 self.text_widget.see(END)
             elif msg.lower() == "change mon nom" or msg.lower() == "change de nom":
                 self.Change_Name_Status = True
+            elif msg.lower() == "top 7 films" or msg.lower() == "top 7 movies" or msg.lower() == "tp7":
+                self.Movie_Status = True
             else:
                 self.text_widget.configure(state=NORMAL)
                 self.text_widget.insert(END, msgp2, 'SkyNet')
@@ -195,6 +202,42 @@ class ChatApplication:
                 self.text_widget.insert(
                     END, ': Quel nom voulez-vous afficher ?\n\n')
                 self.text_widget.configure(state=DISABLED)
+                self.text_widget.see(END)
+
+            if self.Movie_Status:
+                list_of_movies = []
+                for movie in All_Movies:
+                    list_of_movies.append(movie['Name'])
+                sleep(1)
+                self.text_widget.configure(state=NORMAL)
+                self.text_widget.insert(END, msgp2, 'SkyNet')
+                self.text_widget.insert(
+                    END, ': Voici le Top 7 Des Films de cette semaine: \n\n')
+                self.text_widget.insert(END, "1", '_NB')
+                self.text_widget.insert(END, f" - {list_of_movies[0]}\n")
+                self.text_widget.insert(END, "2", '_NB')
+                self.text_widget.insert(END, f" - {list_of_movies[1]}\n")
+                self.text_widget.insert(END, "3", '_NB')
+                self.text_widget.insert(END, f" - {list_of_movies[2]}\n")
+                self.text_widget.insert(END, "4", '_NB')
+                self.text_widget.insert(END, f" - {list_of_movies[3]}\n")
+                self.text_widget.insert(END, "5", '_NB')
+                self.text_widget.insert(END, f" - {list_of_movies[4]}\n")
+                self.text_widget.insert(END, "6", '_NB')
+                self.text_widget.insert(END, f" - {list_of_movies[5]}\n")
+                self.text_widget.insert(END, "7", '_NB')
+                self.text_widget.insert(END, f" - {list_of_movies[6]}\n\n")
+                # self.text_widget.insert(
+                #     END, f"1 - {Films[0]}\n2 - {Films[1]}\n3 - {Films[2]}\n4 - {Films[3]}\n5 - {Films[4]}\n6 - {Films[5]}\n7 - {Films[6]}\n\n")
+                self.text_widget.insert(
+                    END, f"Pour avoir plus d'informations, veuillez blablabla (in Maintenance)\n\n", 'Instruction_movies')
+                self.text_widget.configure(state=DISABLED)
+                self.Movie_Status = False
+                # self.text_widget.configure(state=NORMAL)
+                # self.text_widget.insert(END, msgp2, 'SkyNet')
+                # self.text_widget.insert(
+                #     END, self.MoviesList.Films)
+                # self.text_widget.configure(state=DISABLED)
 
         User_text()
         threading.Thread(target=SkyNet_text).start()
